@@ -87,12 +87,15 @@ export const RQSuperHeroesPage = () => {
     fetchSuperHeroes,
     {
       // cacheTime:5000 //to change cache time
-      // staleTime:5000
+      staleTime:50000
       // refetchOnMount: true ,// refetch on component mount when data is stale values : true | false | always
-      // refetchOnWindowFocus: true // refetch on window focus when data is stale values : true | false | always
+      // refetchOnWindowFocus: true, // refetch on window focus when data is stale values : true | false | always
       // refetchInterval:1000, // Polling: refetching data at regular interval when window is foused
       // refetchIntervalInBackground: false // refetch data even then window is not focused
       // enabled: true // if false query will not run on component mount: now we can use refetch func onClick handler to fetch on click event
+      // onSuccess: (data) => console.log('sucessfully fetched data', data), //code to be executed on success
+      // onError:(data) => console.log('Some error occured'), //code to be executed error
+      // select:(data) => data?.data?.filter(d => d.name !== 'Batman') 
     }
     )
   console.log(data, 'data', isError, error)
@@ -111,12 +114,27 @@ export const RQSuperHeroesPage = () => {
           ?
           <div>Fetching ...</div>
           :
-          <div>{data?.data?.map(d => {
+          <div>{
+            data?.data?.map(d => {
             return(
               <div key={d.id}>{d.name}</div>
             )
-          })}</div>
+          })
+          
+          }
+          </div>
       }
     </>
   )
 }
+
+
+
+
+{/* data?.map(d => {
+            return(
+              <div key={d.id}>{d.name}</div>
+            )
+          }) */} //use when showing select cb
+
+
