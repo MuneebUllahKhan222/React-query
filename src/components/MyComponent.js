@@ -14,7 +14,7 @@ const MyComponent = () => {
         fetchSuperHeroes,
         {
           // cacheTime:5000 //to change cache time
-          staleTime:5000
+          staleTime:5000,
           // refetchOnMount: true ,// refetch on component mount when data is stale values : true | false | always
           // refetchOnWindowFocus: true, // refetch on window focus when data is stale values : true | false | always
           // refetchInterval:1000, // Polling: refetching data at regular interval when window is foused

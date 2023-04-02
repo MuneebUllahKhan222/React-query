@@ -12,6 +12,7 @@ import { DependentQueriesPage } from './components/DependentQueries.page'
 import { PaginatedQueriesPage } from './components/PaginatedQueries.page'
 import { InfiniteQueriesPage } from './components/InfiniteQueries.page'
 import MyComponent from './components/MyComponent'
+import PostMutation from './components/PostMutation'
 
 const queryClient = new QueryClient()
 
@@ -30,6 +31,12 @@ function App() {
               </li>
               <li>
                 <Link to='/rq-super-heroes'>RQ Super Heroes</Link>
+              </li>
+              <li>
+                <Link to='/redux'>Redux replacement</Link>
+              </li>
+              <li>
+                <Link to='/mutation'>Post mutation</Link>
               </li>
             </ul>
           </nav>
@@ -58,8 +65,11 @@ function App() {
             <Route path='/rq-infinite'>
               <InfiniteQueriesPage />
             </Route>
-            <Route path='/my'>
+            <Route path='/redux'>
               <MyComponent />
+            </Route>
+            <Route path='/mutation'>
+              <PostMutation />
             </Route>
             <Route path='/'>
               <HomePage />

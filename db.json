@@ -14,6 +14,26 @@
       "id": 3,
       "name": "Wonder Woman",
       "alterEgo": "Princess Diana"
+    },
+    {
+      "name": "spider man",
+      "alterEgo": "tobey maguire",
+      "id": 4
+    },
+    {
+      "name": "abc",
+      "alterEgo": "abc",
+      "id": 5
+    },
+    {
+      "name": "xyz",
+      "alterEgo": "xyz",
+      "id": 6
+    },
+    {
+      "name": "pqr",
+      "alterEgo": "pqr",
+      "id": 7
     }
   ],
   "friends": [
@@ -39,7 +59,11 @@
   "channels": [
     {
       "id": "codevolution",
-      "courses": ["react", "vue", "angular"]
+      "courses": [
+        "react",
+        "vue",
+        "angular"
+      ]
     }
   ],
   "colors": [
